@@ -1,7 +1,51 @@
 
 :root {
 	--color-offwhite:  #f4f4f4;
+	--color-main-light:lightblue;
+	--color-main-medium:#f38feb;
+	--color-main-dark:darkblue;
 }
 body {
 	background-color: var(--color-offwhite);
+}
+
+body {
+	font-family:  Roboto;
+	font-size: 12pt;
+}
+
+h1 {
+	font-family:  Bodoni;
+	font-size: 36pt;
+	font-color: var(--color-main-medium#a51868);
+}
+
+h2 {
+	font-family:  Roboto;
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+h3 {
+	font-family:  Bodoni;
+	font-size: 18pt;	
+}
+
+
+@media (max-width: 800px) {
+	.container {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.navbar h1{
+		padding-left: 0.5em;
+	}
+
+@media (max-width: 400px) {
+	.navbar .display-flex {
+		display: block;
+	}
+	.navbar .na li {
+		line-height:  2em;
+	}
 }
