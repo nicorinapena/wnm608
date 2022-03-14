@@ -20,25 +20,25 @@
 	--header-height: 3rem;
 	--spacing: 1rem;
 
-	--font-serif: Bodoni;
-	--font-sans: Roboto;
+	--font-serif: Bodoni, Georgia;
+	--font-sans: Roboto, Helvetica;
 }
 
 body {
 	margin: 0;
 	font-size: 100%;
-	font-family:  Helvetica;
+	font-family:  var(--font-sans)
 }
 
 h1,
 h3,
 h6 {
-	font-family:  Bodoni;
-	font-color: #a51868;
+	font-family:  var(--font-serif);
+
 }
 
 h2 {
-	font-family:  Roboto;
+	font-family:  var(--font-sans)
 }
 
 a {
@@ -243,24 +243,102 @@ a:hover {
 .table th,
 .table td {
 	text-align: left;
-	padding: 0.2 0.5em;
+	padding: 0.2em 0.5em;
 }
 
 .table.striped tbody tr:nth-child(odd) {
 	background-color: var(--color-neutral-light);
 }
 
-.table.lined.all th:not(first-child),
-.table.lined.all td:not(first-child),{
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child),{
 	border-left:  1px solid var(--color-neutral-medium);
 }
 
+.table.lined.all tbody tr,
 .table.lined.all tbody tr{
 	border-top:  1px solid var(--color-neutral-medium);
 }
 
-.table.lined.all, 
+.table.lined.all,
 .table.lined.border {
 	border:  1px solid var(--color-neutral-medium);
 }
+
+
+
+/* Figure */
+.figure {
+	margin: 0;
+	background-color: var(--color-white);
+}
+
+.figure img {
+	width: 100%;
+	vertical-align: text-bottom;
+}
+.figure figcaption {
+	padding: 1em;
+}
+
+
+/* FORMS */
+.form-control {
+	margin: 1em 0;
+
+}
+.form-button
+.form-input
+.form-item {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0.5em 1em;
+    font: inherit;
+    webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+
+}
+.form-input {
+    border-bottom: 1px solid var(--color-neutral-light);
+    
+}
+
+.form-input:focus {
+	border-bottom-color: var(--color-main-light);
+}
+
+.form-label {
+	font-size: 0.8em;
+	color:  var(--color-neutral-medium;
+	display: block;
+	width: 100%;
+
+}
+
+
+.form-button {
+    background-color: var(--color-neutral-light);
+    border-radius: 0.2em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-button:hover {
+	text-decoration: none;
+}
+.form-button:active {
+	background-color: var(--color-main-light);
+}
+
+.hotdog {
+	background-color: var(--color-neutral-light);
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+}
+
 
