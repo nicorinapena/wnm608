@@ -23,7 +23,8 @@
 			<div class="flex-stretch"></div>
 			<nav class="flex-none nav">
 				<ul class="container display-flex">
-					<li><a href="#tableofcontents">Table of Contents</a></li>
+					<li><a href="#tableofcontents">Table of Contents</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -46,11 +47,17 @@
 				<li><a href="#flexsystem">Flex System</a></li>
 				<li><a href="#tables">Tables</a></li>
 				<li><a href="#forms">Forms</a></li>
-				</ul>
+				<ul>
 					<li><a href="#input">Inputs</a></li>
 					<li><a href="#labels">Labels</a></li>
 					<li><a href="#controls">Controls</a></li>
 					<li><a href="#buttons">Buttons</a></li>
+				</ul>
+				<li><a href="#hotdog">Hotdog</a></li>
+				<li><a href="#select">Select</a></li>
+				<li><a href="#favorites">Favorites</a></li>
+				<li><a href="#Toggle">Toggle</a></li>
+				</ul>
 			</nav>
 			</div>
 	</div>
@@ -104,6 +111,9 @@
 
 	<div class="container">
 		<h2>View Window</h2>
+		<div class="view-window" style="background-image: url('https://via.placeholder.com/500');">
+	</div>
+
 	</div>
 
 
@@ -174,11 +184,81 @@
 
 	</div>
 
-	<div class="container">
+	<div class="container" id="gridsystem">
 		<h2>Grid Sytstem</h2>
-	</div>
 
-	<div class="container">
+		<div class="card soft">
+		<h4>Grid</h4>
+		<div class="grid">
+		<div class="col-xs-6">column 6</div>
+		<div class="col-xs-6">column 6</div>
+		</div>
+		<div class="grid gap xs-small md-medium">
+		<div class="col-xs-4">column 4</div>
+		<div class="col-xs-4">column 4</div>
+		<div class="col-xs-4">column 4</div>
+	
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-3">column 3</div>
+
+		<div class="col-xs-3">column 3</div>
+		<div class="col-xs-6">column 6</div>
+		<div class="col-xs-3">column 3</div>
+		</div>
+		</div>
+
+		<div class="card soft">
+			<h4>Responsive Grid</h4>
+			<div class="grid">
+				<div class="col-xs-12 col-md-6">column 6</div>
+				<div class="col-xs-12 col-md-6">column 6</div>
+			</div>
+			<div class="grid">
+				<div class="col-xs-12 col-md-4 col-xl-3">column 4 </div>
+				<div class="col-xs-12 col-md-4 col-xl-6">column 4 </div>
+				<div class="col-xs-12 col-md-4 col-xl-3">column 4 </div>
+
+				<div class="col-xs-3">columns 3</div>
+				<div class="col-xs-3">columns 3</div>
+				<div class="col-xs-3">columns 3</div>
+				<div class="col-xs-3">columns 3</div>
+			</div>
+			<div class="grid ten gap">
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+			</div>
+			</div>
+
+			<div class="container">
+				<div class="grid gap xs-small md-medium">
+					<div class="col-xs-6 col-md-3">
+						<div class="card soft"><img src="https://via.placeholder.com/500" alt="" class="media-image"></div>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<div class="card soft">
+							<img src="https://via.placeholder.com/500" alt="" class="media-image">
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<div class="card soft">
+							<img src="https://via.placeholder.com/500" alt="" class="media-image">
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<div class="card soft">
+							<img src="https://via.placeholder.com/500" alt="" class="media-image">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+	<div class="container" id="flexsystem">
 		<h2>Flex System</h2>
 	</div>
 
@@ -220,7 +300,6 @@
 	
 	<div class="card soft">
 		<h3>Striped Lined Vertical</h3>
-
 		<script>makeTable("table lined vertical")</script>
 	</div>
 
@@ -348,63 +427,102 @@
 	</div>
 
 	<div class="container" id="forms">
-		<h2> Forms</h2>
-
-		<h3> Inputs</h3>
-
+		<h2>Forms</h2>
+		
+		<div id="input"><h3>Inputs</h3></div>
 		<div class="card soft">
 			<h3>Default Inputs</h3>
 			<form>
 				<input type="text"><br>
 				<input type="number"><br>
-				<input type="password"><br>
 				<input type="url"><br>
+				<input type="password"><br>
 				<input type="email"><br>
 				<input type="datetime-local"><br>
 				<input type="date"><br>
 				<input type="search"><br>
 			</form>
-
-			<h3>Form Input</h3>
+		</div>
+		<div class="card soft">
+			<h3>Form Inputs</h3>
 			<form>
-				<input type="text" placeholder="Text" class="form-input">
-				<input type="number" placeholder="Number" class="form-input">
-				<input type="password" placeholder="Password" class="form-input">
-				<input type="search" placeholder="Search" class="form-input">
-
-			<h3>Form Label</h3>
-			<form>
-				<label class="form-label">Example</label>
-				<input type="text" placeholder="Text" class="form-input">
-	
-				<label class="form-label">Example</label>
-				<input type="number" placeholder="Number" class="form-input">
-			
-				<label class="form-label">Example</label>
-				<input type="password" placeholder="Password" class="form-input">
-			
-				<label class="form-label">Example</label>
-				<input type="search" placeholder="Search" class="form-input">
+				<input type="text" placeholder="First Name" class="form-input"><br>
+				<input type="text" placeholder="Last Name" class="form-input"><br>
+				<input type="number" placeholder="Phone Number" class="form-input"><br>
+				<input type="url" placeholder="Website" class="form-input"><br>
+				<input type="Email" placeholder="Email" class="form-input"><br>
+				<input type="text" placeholder="Username" class="form-input"><br>
+				<input type="password" placeholder="Password" class="form-input"><br>
+				<input type="datetime-local" class="form-input"><br>
+				<input type="date" class="form-input"><br>
+				<input type="search" placeholder="Search" class="form-input"><br><br>
 			</form>
+		</div>
+		
+		<h3>Form Labels</h3>
+		<div class="card soft" id="labels">
 			
-			<h3>Form Control</h3>
+			<form>
+
+				<label class="form-label">First Name</label>
+				<input type="text" placeholder="First Name" class="form-input">
+
+				<label class="form-label">Last Name</label>
+				<input type="text" placeholder="Last Name" class="form-input">
+
+				<label class="form-label">Phone Number</label>
+				<input type="number" placeholder="Phone Number" class="form-input">
+
+				<label class="form-label">Website</label>
+				<input type="url" placeholder="Website" class="form-input">
+
+				<label class="form-label">Email</label>
+				<input type="Email" placeholder="Email" class="form-input">
+
+				<label class="form-label">Username</label>
+				<input type="text" placeholder="Username" class="form-input">
+
+				<label class="form-label">Password</label>
+				<input type="password" placeholder="Password" class="form-input">
+
+				<label class="form-label">Date Local</label>
+				<input type="datetime-local" placeholder="Password" class="form-input">
+
+				<label class="form-label">Date</label><input type="date" placeholder="Date" class="form-input">
+
+				<label class="form-label">Search</label><input type="search" placeholder="Search" class="form-input">
+
+			</form>
+		
+		</div>
+
+		<h3>Form Controls</h3>
+		<div class="card soft" id="controls">
+		
 		<form>
 			<div class="form-control">
-				<label class="form-label">Example</label>
-				<input type="text" placeholder="Text" class="form-input">
-			</div>
-			<div class="form-control">	
-				<label class="form-label">Example</label>
-				<input type="number" placeholder="Number" class="form-input">
+				<label class="form-label">First Name</label>
+				<input type="text" placeholder="First Name" class="form-input">
 			</div>
 			<div class="form-control">
-				<label class="form-label">Example</label>
+				<label class="form-label">Last Name</label>
+				<input type="text" placeholder="Last Name" class="form-input">
+			</div>
+
+			<div class="form-control">	
+				<label class="form-label">Phone Number</label>
+				<input type="Number" placeholder="000-000-0000" class="form-input">
+			</div>
+			<div class="form-control">
+				<label class="form-label">Password</label>
 				<input type="password" placeholder="Password" class="form-input">
 			</div>
+			
 			<div class="form-control display-flex flex-align-center">
 			<div class="flex-none">
 				<label class="form-label">Example</label>
 			</div>
+
 			<div class="flex-stretch">
 				<input type="search" placeholder="Search" class="form-input">
 			</div>
@@ -417,26 +535,31 @@
 			</div>
 		</form>
 		</div>
+	
 
 	<h3>Buttons</h3>
 
-	<div class="card soft">
-		<h3>Default Buttons</h3>
-		<button>Button</button>
+		<div class="card soft" id="buttons">
+		<h4>Default Buttons</h4>
+			<button>Button</button>
 
-		<h3>Form Buttons</h3>
-		<div class="form-control">
-		<button class="form-button">Button</button>
+		<h4>Form Buttons</h4>
+
+		<div class="flex-stretch">
+			<button type="button" class="form-button">Button</button>
 		</div>
-		<div class="form-control">
-		<input type="button" class="form-button" value="Input">
+		<div class="flex-stretch">
+			<input type="button" class="form-button" value="Input">
 		</div>
-		<div class="form-control">
-		<a href="#" class="form-button">Anchor</a>
+		<div class="flex-stretch">
+			<a href="#" class="form-button">Anchor</a>
+		</div>
 		</div>
 	</div>
-		
+
+
 	<h2>Hotdog</h2>
+	<div class="container" id="hotdog">
 
 	<div class="card soft">
 		<div class="form-control">
@@ -444,9 +567,55 @@
 				<input type="search" class="hotdog" placeholder="search">
 			</form>
 		</div>
+		<div class="form-control">
+			<form>
+				<input type="search" class="hotdog dark" placeholder="search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form class="card dark">
+				<input type="search" class="hotdog light" placeholder="search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form class="hotdog">
+				<span>&equiv;</span>
+				<input type="search" placeholder="search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form class="hotdog">
+				<input type="search" placeholder="search">
+				<span>&equiv;</span>
+			</form>
+		</div>
 	</div>
 
+	<h2 id="select">Select</h2>
+	<div class="card soft">
+		<div class="form-select">
+		<select>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+		</div>
+		<div class="display-flex">
+		<div class="flex-stretch"></div>
+		<div class="flex-none">
+			<div class="form-select">
+		<select>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+		</div>
+	</div>
+	</div>
+</div>
+
+
 </body>
-
-
 </html>
