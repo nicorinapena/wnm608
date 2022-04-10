@@ -8,11 +8,11 @@
 :root {
 	--color-neutral-light:#eeeeee;
 	--color-neutral-medium:#999;
-	--color-neutral-dark:#a51868;
+	--color-neutral-dark:#10a5f5;
 
-	--color-main-light:lightblue;
-	--color-main-medium:#c8167b;
-	--color-main-dark:darkblue;
+	--color-main-light:#cfcfcf;
+	--color-main-medium:#565656;
+	--color-main-dark:#333333;
 
 	--color-black: #000000;
 	--color-white: #ffffff;
@@ -127,7 +127,7 @@ a:hover {
 }
 
 .nav-pills a{
-	border-radius:  2em;
+	border-radius:  1em;
 	padding: 0.5em 1em;
 }
 
