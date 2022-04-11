@@ -1,0 +1,33 @@
+[
+	{
+		"name":"Nicorina Pena",
+		"occupation":"Student",
+		"email":"npena6@art.edu",
+		"classes":[608,605]
+	},
+	{
+		"name":"Rhina Pena",
+		"occupation":"Web Designer",
+		"email":"npena7@art.edu",
+		"classes":[601,606]
+	},
+	{
+		"name":"Rhinrhin Pena",
+		"occupation":"Art Director",
+		"email":"npena8@art.edu",
+		"classes":[602,607]
+	},
+	{
+		"name":"Rinna Pena",
+		"occupation":"Entrepreneur",
+		"email":"npena9@art.edu",
+		"classes":[603,608]
+	},
+	{
+		"name":"Riri Pena",
+		"occupation":"CEO",
+		"email":"npena5@art.edu",
+		"classes":[603,608]
+	}
+]
+

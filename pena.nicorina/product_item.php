@@ -33,7 +33,7 @@
 			<option>3</option>
 			<option>4</option>
 		</select>
-		</div><br>
+		</div>
 		<div class="form-button">
 			<button><a href="cart_checkout.php" class="form-button">Add to Cart</a></button>
 		</div>
