@@ -296,7 +296,6 @@ a:hover {
 .form-select>select
 .hotdog input,
 .hotdog,
-.form-button,
 .form-input,
 .form-item {
     display: inline-block;
@@ -327,15 +326,6 @@ a:hover {
 
 }
 
-
-.form-button {
-	background-color: var(--color-main-light);
-	padding: 0.5em 1em;
-	border-radius: 0.2em;
-	cursor: pointer;
-	text-align: center;
-
-}
 .form-button:hover {
 	text-decoration: none;
 }
