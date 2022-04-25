@@ -57,7 +57,7 @@ a:hover {
 /* LAYOUT CLASSES */
 
 .container {
-	max-width: 800px;
+	max-width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -223,7 +223,7 @@ a:hover {
 
 
 .view-window {
-	height: 50vh;
+	height: 90vh;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;
@@ -292,7 +292,6 @@ a:hover {
 	margin: 1em 0;
 
 }
-
 .form-select>select
 .hotdog input,
 .hotdog,
@@ -304,7 +303,7 @@ a:hover {
     font: inherit;
     -webkit-appearance: none;
     color: inherit;
-    width: 100%;
+    width: 90%;
     outline: 0;
 }
 
@@ -331,6 +330,15 @@ a:hover {
 }
 .form-button:active {
 	background-color: var(--color-main-light);
+	display: inline-block;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 80%;
+    outline: 0;
+    cursor: pointer;
+
 }
 
 .hotdog {

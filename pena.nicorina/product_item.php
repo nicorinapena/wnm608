@@ -35,8 +35,7 @@
 		</select>
 		</div>
 		<div class="form-button">
-			<button><a href="cart_checkout.php" class="form-button">Add to Cart</a></button>
-		</div>
+		<p><a href="product_added_to_cart.php">Add To Cart</a>
 		</div>
 	</div>
 </body>

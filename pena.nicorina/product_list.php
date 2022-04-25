@@ -10,9 +10,6 @@
 	
 	<?php include "parts/navbar.php"; ?>
 
-	<div class="view-window" style="background-image: url('https://via.placeholder.com/500');">
-	</div>
-
 
 	<div class="container">
 		<div class="card soft">
@@ -93,7 +90,19 @@
 				</figcaption>
 					</figure>
 			</div>
-			</div>
+
+		</div>
+
+			<?php
+
+			include "lib/php/function.php";
+
+			makeQuery(makeConn(), "SELECT * FROM `products`")
+
+			print_p($result);
+
+			?>
+		
 		
 	</div>
 

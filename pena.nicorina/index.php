@@ -9,7 +9,7 @@
 <body>
 	<?php include "parts/navbar.php"; ?>
 
-	<div class="view-window" style="background-image: url('https://via.placeholder.com/500');">
+	<div class="view-window" style="background-image: url('img/summersale1.jpeg');">
 	</div>
 
 	<div class="container">
@@ -24,15 +24,14 @@
 		</div>
 		</div>
 		<div class="article-body">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ad, obcaecati porro quasi repellendus. Rerum voluptatibus temporibus voluptatem placeat tempore ullam cupiditate quos quas accusantium vel, veniam ut doloribus exercitationem.</p>
-			<p>Omnis deserunt excepturi debitis esse quaerat in, quidem sunt recusandae libero vel sit, odio quia est tempore autem qui unde voluptates iusto ipsum dolores maiores ipsa, laborum, doloremque nulla. Adipisci.</p>
-			<p>Tempora numquam sint fugit nostrum dolorum voluptatibus ullam illum accusantium, sequi, officia blanditiis debitis eveniet, non odio odit quas dolorem corrupti laboriosam. Voluptatem omnis aspernatur magni ipsa, a velit minus.</p>
+			<p>Rhin-O-Roo is a reputable reseller for amazing brands.  We bridge Philippine consumers to US Brands.  Our goal is to give our consumers the best possible deals and hassle free payment and shipping method. </p>
+			<p>Our small business had been around for over a year now.  It is owned by amazing couples, Rhin & Bon who lived in California, USA.  It is also managed by Bon's amazing sisters in the Philippines.  They love shopping for awesome brands at sale prices.  They wanted to share the amazing deals with other people, specially to those who doesn't have stores that carry specific items.</p>
+			<p>We hope that we can serve you by shopping with us and letting us bring you your shopping requests.</p>
 		</div>
 	</div>
 
 		<div class="container">
-		<h2>Featured Sale</h2>
-		<div class="view-window" style="background-image: url('https://via.placeholder.com/500');">
+		<div class="view-window" style="background-image: url('img/shopping_2.jpeg');">
 		</div>
 		</div>
 
@@ -40,21 +39,21 @@
 		<h2>Deals! Deals! Deals!</h2>
 				<div class="grid gap xs-small md-medium">
 					<div class="col-xs-6 col-md-3">
-						<div class="card soft"><img src="https://via.placeholder.com/500" alt="" class="media-image"></div>
+						<div class="card soft"><img src="img/img_2.jpg" alt="" class="media-image"></div>
 					</div>
 					<div class="col-xs-6 col-md-3">
 						<div class="card soft">
-							<img src="https://via.placeholder.com/500" alt="" class="media-image">
+							<img src="img/img_12.jpg" alt="" class="media-image">
 						</div>
 					</div>
 					<div class="col-xs-6 col-md-3">
 						<div class="card soft">
-							<img src="https://via.placeholder.com/500" alt="" class="media-image">
+							<img src="img/img_11.jpeg" alt="" class="media-image">
 						</div>
 					</div>
 					<div class="col-xs-6 col-md-3">
 						<div class="card soft">
-							<img src="https://via.placeholder.com/500" alt="" class="media-image">
+							<img src="img/img_1.JPG" alt="" class="media-image">
 						</div>
 					</div>
 				</div>
