@@ -91,11 +91,13 @@
 					</figure>
 			</div>
 
-		</div>
+			</div>
+		
+
 
 			<?php
 
-			include "lib/php/function.php";
+			include "lib/php/functions.php";
 
 			makeQuery(makeConn(), "SELECT * FROM `products`")
 
@@ -103,7 +105,7 @@
 
 			?>
 		
-		
+		</div>
 	</div>
 
 </body>

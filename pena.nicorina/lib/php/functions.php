@@ -27,3 +27,4 @@ function makeQuery($conn,$qry) {
 	}
 	return $a;
 }
+?>
