@@ -294,19 +294,19 @@ a:hover {
 	margin: 1em 0;
 
 }
-.form-select>select
+.form-select select,
 .hotdog input,
 .hotdog,
 .form-input,
 .form-item {
     display: inline-block;
-    background-color: transparent;
+    background-color: var(--color-neutral-light);
     border-width: 0;
     font: inherit;
     -webkit-appearance: none;
     color: inherit;
     width: 90%;
-    outline: 0;
+    outline: 1;
 }
 
 .form-input {

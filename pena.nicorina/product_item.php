@@ -10,7 +10,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	return $r."<img src='/img/$o'>";
 });
 
-//print_p($product);
+print_p($_SESSION);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -39,16 +39,18 @@ $image_elements = array_reduce($images,function($r,$o){
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-5">
-				<div class="card flat">
+				<form class="card soft" method="post" action="cart_actions.php?action=add-to-cart">
+					<input type="hidden" name="product-id" value="<?=$product->id ?>">
+
 					<div class="card-section">
-					<h2 class="product-name"><?=$product->name ?></h2>
+					<h3 class="product-name"><?=$product->name ?></h3>
 					<div class="product-price">&dollar;<?=$product->price ?></div>
 					</div>
 
 					<div class="card-section">
-						<label for="product-amount" class="form-label">Amount</label>
-						<div class="form-select" id="product-amount">
-						<select>
+						<label for="product-amount" class="form-label">Quantity:</label>
+						<div class="form-select">
+						<select id="product-amount" name="product-amount">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -61,17 +63,22 @@ $image_elements = array_reduce($images,function($r,$o){
 							<option>10</option>
 						</select>
 						</div>
-
-					</div>
+						</div>
+					<div>
 					<div class="card-section">
-						<a href="product_added_to_cart.php?id=<?=$product->id ?>" class="form-button">Add To Cart</a>
+						<input type="submit" class="form-button" value="Add To Cart">
 					</div>
-				</div>
+					</div>
+				</form>
+			<div class="card soft">
+				<h5>Product Details:</h5>
+				<p><?=$product->product_details ?></p></div>
 			</div>
 		</div>
-		<div class="card soft dark">
-			<p><?= $product-> description ?></p>
-		</div>
+	</div>
+
+		
+
 	</div>
 </body>
 </html>
