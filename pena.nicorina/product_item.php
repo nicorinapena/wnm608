@@ -10,7 +10,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	return $r."<img src='img/$o'>";
 });
 
-print_p($_SESSION);
+//print_p($_SESSION);
 
 ?><!DOCTYPE html>
 <html lang="en">
