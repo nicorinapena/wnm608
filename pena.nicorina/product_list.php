@@ -11,14 +11,6 @@ include_once "parts/templates.php";
 
 	<?php include "parts/meta.php"; ?>
 
-	<script src="lib/js/functions.js"></script>
-	<script src="js/templates.js"></script>
-
-	<script>
-	query({type:'products_all'}).then(d=>{
-		$(".productlist").html(listItemTemplate(d.result))
-	});
-	</script>
 </head>
 <body>
 	
@@ -34,7 +26,22 @@ include_once "parts/templates.php";
 				</form>
 			</div>
 
-			<div class='productlist grid gap'></div>
+			<?php 
+
+			$result = makeQuery (
+				makeConn(),
+				"
+				SELECT *
+				FROM `products`
+				ORDER BY `date_create` DESC
+				LIMIT 12
+				"	
+
+			);
+
+			echo "<div class='productlist grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+
+				?>
 
 		</div>
 

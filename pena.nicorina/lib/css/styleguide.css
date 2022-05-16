@@ -294,7 +294,6 @@ a:hover {
 	margin: 1em 0;
 
 }
-.form-select select,
 .hotdog input,
 .hotdog,
 .form-input,
@@ -327,19 +326,24 @@ a:hover {
 
 }
 
+.form-button {
+	background-color: var(--color-neutral-light);
+	padding: 0.5em 1 em;
+	border-radius:  0.2em;
+	cursor:  pointer;
+	text-align: center
+
+}
+
+.form-button.inline {
+	width: initial;
+}
+
 .form-button:hover {
 	text-decoration: none;
 }
 .form-button:active {
 	background-color: var(--color-main-light);
-	display: inline-block;
-    border-width: 0;
-    font: inherit;
-    -webkit-appearance: none;
-    color: inherit;
-    width: 80%;
-    outline: 0;
-    cursor: pointer;
 
 }
 

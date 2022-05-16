@@ -7,7 +7,7 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 $images = explode(",",$product->images);
 
 $image_elements = array_reduce($images,function($r,$o){
-	return $r."<img src='/img/$o'>";
+	return $r."<img src='img/$o'>";
 });
 
 print_p($_SESSION);
