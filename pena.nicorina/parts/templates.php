@@ -81,6 +81,5 @@ return <<<HTML
 					<div class="card soft dark">
 					<div class="card-section">
 						<a href="product_checkout.php" class="form-button">Checkout</a></div>
-
 HTML;
 }

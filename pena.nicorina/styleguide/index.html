@@ -510,7 +510,7 @@
 
 			<div class="form-control">	
 				<label class="form-label">Phone Number</label>
-				<input type="Number" placeholder="000-000-0000" class="form-input">
+				<input type="number" placeholder="000-000-0000" class="form-input">
 			</div>
 			<div class="form-control">
 				<label class="form-label">Password</label>
@@ -535,8 +535,9 @@
 		</form>
 		</div>
 
-		<h3>Address</h3>	
-	<form class="form">
+		<h3>Address</h3>
+		<div class="card soft" id="controls">	
+		<form class="form">
 		<div class="form-control">
 			<label class="address-street" class="form-label">Street</label>
 			<input id="address-street" type="text" placeholder="Street name" class="form-input">
@@ -569,6 +570,7 @@
 			<input type="submit" class="form-button" value="Submit">
 		</div>
 	</form>
+</div>
 	
 
 	<h3>Buttons</h3>
@@ -579,13 +581,13 @@
 
 		<h4>Form Buttons</h4>
 
-		<div class="flex-stretch">
+		<div class="form-control">
 			<button type="button" class="form-button">Button</button>
 		</div>
-		<div class="flex-stretch">
+		<div class="form-control">
 			<input type="button" class="form-button" value="Input">
 		</div>
-		<div class="flex-stretch">
+		<div class="form-control">
 			<a href="#" class="form-button">Anchor</a>
 		</div>
 		</div>
@@ -608,26 +610,28 @@
 		</div>
 		<div class="form-control">
 			<form class="card dark">
-				<input type="search" class="hotdog light" placeholder="search">
+				<input type="search" class="hotdog light" placeholder="Search">
 			</form>
 		</div>
 		<div class="form-control">
 			<form class="hotdog">
 				<span>&equiv;</span>
-				<input type="search" placeholder="search">
+				<input type="search" placeholder="Search">
 			</form>
 		</div>
 		<div class="form-control">
 			<form class="hotdog">
-				<input type="search" placeholder="search">
+				<input type="search" placeholder="Search">
 				<span>&equiv;</span>
 			</form>
 		</div>
 	</div>
-	</div>
+</div>
+
 
 	<div class="container">
 	<h2 id="select">Select</h2>
+
 	<div class="card soft">
 		<div class="form-select">
 		<select>
@@ -640,7 +644,7 @@
 		<div class="display-flex">
 		<div class="flex-stretch"></div>
 		<div class="flex-none">
-			<div class="form-select">
+		<div class="form-select">
 		<select>
 			<option>1</option>
 			<option>2</option>
@@ -650,8 +654,38 @@
 		</div>
 		</div>
 		</div>
-	</div>
-	</div>
+		</div>
+
+
+		<h2 id="checkboxes">Check Boxes</h2>
+
+		<div class="card soft">
+			<label>Label <input type="checkbox" id="input-1"></label>
+			<label for="input-1">Label</label>
+
+			<h3>Heart Checkbox</h3>
+			<div class="favorite">
+				<input type="checkbox" id="heart-example" class="hidden">
+				<label for="heart-example">&hearts;</label>
+			</div>
+
+			<h3>Toggle</h3>
+			<div class="toggle">
+				<input type="checkbox" id="toggle-1" class="hidden">
+				<label for="toggle-1"></label>
+			</div>
+			<div class="display-flex flex-align-center">
+				<div class="flex-stretch">
+					<label for="toggle-2" class="form-label">Display Warning?</label>
+				</div>
+				<div class="flex-none">
+					<div class="toggle" style="font-size:2em">
+						<input type="checkbox" id="toggle-2" class="hidden">
+						<label for="toggle-2"></label>
+					</div>
+				</div>
+			</div>
+		</div>
 
 </body>
 </html>

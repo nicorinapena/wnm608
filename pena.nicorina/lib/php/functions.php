@@ -18,6 +18,15 @@ function makeConn() {
 	$conn->set_charset('utf8');
 	return $conn;
 }
+function makePDOConn() {
+	try {
+		$conn = new PDO(...PDOAuth());
+	} catch(PDOException $e) {
+		die($e->getMessage());
+	}
+	return $conn;
+}
+
 
 
 function makeQuery($conn,$qry) {
@@ -66,7 +75,7 @@ function makeCartBadge() {
 	if(count($cart)==0) {
 		return "";
 	} else {
-		return array_reduce($cart,function($r,$o){return $r+$o->amount;},0);
+		return array_reduce($cart,function($r,$o){return $r+$o-> amount;},0);
 	}
 }
 

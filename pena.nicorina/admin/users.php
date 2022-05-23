@@ -57,7 +57,7 @@ function showUserPage($user) {
 $id = $_GET['id'];
 $addoredit = $id == "new" ? "Add" : "Edit";
 $createorupdate = $id == "new" ? "create" : "update";
-$classes = implode(", ", $user->classes);
+$images = implode(", ", $user->images);
 
 // heredoc
 $display = <<<HTML
@@ -73,7 +73,7 @@ $display = <<<HTML
  	</div>
  	<div>
  		<strong>Classes</strong>
- 		<span>$classes</span>
+ 		<span>$images</span>
  	</div>
  </div>
 HTML;
@@ -95,8 +95,8 @@ $form = <<<HTML
 		<input class="form-input" name="user-email" id="user-email" type="text" value="$user->email" placeholder="Enter the User Email">
 	</div>
 	<div class="form-control">
-		<label class="form-label" for="user-classes">Classes</label>
-		<input class="form-input" name="user-classes" id="user-classes" type="text" value="$classes" placeholder="Enter the User Classes, comma separated">
+		<label class="form-label" for="user-images">Classes</label>
+		<input class="form-input" name="user-images" id="user-images" type="text" value="$images" placeholder="Enter the User Images, comma separated">
 	</div>
 	<div class="form-control">
 		<input class="form-button" type="submit" value="Save Changes">
