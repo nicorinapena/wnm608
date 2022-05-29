@@ -16,7 +16,7 @@ $empty_user = (object) [
 //CRUD, Create Read Update Delete
 
 
-//print_p([$_GET,$_POST]);
+// print_p([$_GET,$_POST]);
 
 if(isset($_GET['action'])) {
 	switch($_GET['action']) {
@@ -57,7 +57,7 @@ function showUserPage($user) {
 $id = $_GET['id'];
 $addoredit = $id == "new" ? "Add" : "Edit";
 $createorupdate = $id == "new" ? "create" : "update";
-$images = implode(", ", $user->images);
+$classes = implode(", ", $user->classes);
 
 // heredoc
 $display = <<<HTML
@@ -73,7 +73,7 @@ $display = <<<HTML
  	</div>
  	<div>
  		<strong>Classes</strong>
- 		<span>$images</span>
+ 		<span>$classes</span>
  	</div>
  </div>
 HTML;
@@ -95,8 +95,8 @@ $form = <<<HTML
 		<input class="form-input" name="user-email" id="user-email" type="text" value="$user->email" placeholder="Enter the User Email">
 	</div>
 	<div class="form-control">
-		<label class="form-label" for="user-images">Classes</label>
-		<input class="form-input" name="user-images" id="user-images" type="text" value="$images" placeholder="Enter the User Images, comma separated">
+		<label class="form-label" for="user-classes">Classes</label>
+		<input class="form-input" name="user-classes" id="user-classes" type="text" value="$classes" placeholder="Enter the User Images, comma separated">
 	</div>
 	<div class="form-control">
 		<input class="form-button" type="submit" value="Save Changes">
@@ -168,6 +168,7 @@ HTML;
 				<ul>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>">User List</a></li>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New User</a></li>
+					<li><a href="admin/index.php">Product Page</li>
 				</ul>
 			</nav>
 		</div>

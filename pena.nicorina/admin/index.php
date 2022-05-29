@@ -3,19 +3,20 @@
 include "../lib/php/functions.php";
 
 $empty_product = (object)[
-	"name" =>"",
-	"product_details" =>"",
-	"price" =>"",
-	"category" =>"",
-	"thumbnail" =>"",
-	"images" =>""
+	"name" =>"Limited Edition Candy Love",
+	"product_details" =>"30 ml(1 fl.oz)",
+	"price" =>"24.99",
+	"category" =>"Perfume",
+	"thumbnail" =>"img_2.jpg",
+	"images" =>"img_2.jpog",
+	"quantity"=>"3"
 ];
 
 
 
 
+// LOGIC
 
-// LOGIC //
 try {
 	$conn = makePDOConn();
 	switch($_GET['action']) {
@@ -45,7 +46,7 @@ try {
 		]);
 		header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
 		break;
-		case "create":
+	case "create":
 		$statement = $conn->prepare("INSERT INTO
 			`products`
 			(
@@ -56,10 +57,10 @@ try {
 				`product_details`,
 				`thumbnail`,
 				`images`,
-				`date_create`,
+				`date_create`
 				`date_modify`
 			)
-			VALUES (?,?,?,?,?,?,?,NOW())
+			VALUES (?,?,?,?,?,?,?,NOW(),NOW())
 			");
 		$statement->execute([
 			$_POST['product-name'],
@@ -73,8 +74,10 @@ try {
 		$id = $conn->lastInsertId();
 		header("location:{$_SERVER['PHP_SELF']}?id=$id");
 		break;
-		case "delete":
-		header("location:{$_SERVER['PHP_SELF']}?");
+	case "delete":
+		$statement = $conn->prepare("DELETE FROM `products` WHERE id=?");
+		$statement->execute([$_GET['id']]);
+		header("location:{$_SERVER['PHP_SELF']}?id=$id");
 		break;
 	}
 } catch(PDOException $e) {
@@ -102,8 +105,7 @@ HTML;
 
 function showProductPage($o) {
 
-$id = $_GET['id'];
-$addoredit = $id == "new" ? "Add" : "Edit";
+$addoredit = $id == "new" ? "add" : "edit";
 $createorupdate = $id == "new" ? "create" : "update";
 $images = array_reduce (explode (",",$o->images),function($r,$o){return $r."<img src='/img/$o'>";});
 
@@ -151,7 +153,7 @@ $form = <<<HTML
 		<input class="form-input" name="product-price" id="product-price" type="Number" min="0" max="1000" step="0.01" value="$o->price" placeholder="Enter the Price">
 	</div>
 	<div class="form-control">
-		<label class="form-label" for="product-price">Quantity</label>
+		<label class="form-label" for="product-quantity">Quantity</label>
 		<input class="form-input" name="product-quantity" id="product-quantity" type="Number" min="0" max="1000" step="1" value="$o->quantity" placeholder="Enter the Quantity">
 	</div>
 	<div class="form-control">
@@ -221,6 +223,7 @@ HTML;
 				<ul>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
 					<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>
+					<li><a href="admin/users.php">Admin Users</li>
 				</ul>
 			</nav>
 		</div>
@@ -244,7 +247,7 @@ HTML;
 		<h2>Product List</h2>
 		<?php
 
-		$result = makeQuery(makeConn(),"SELECT * FROM `products`");
+		$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY `date_create` DESC");
 		echo array_reduce($result,'productListItem');
 
 		?>

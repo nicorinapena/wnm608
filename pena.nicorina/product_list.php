@@ -30,7 +30,7 @@ include_once "parts/templates.php";
 			</div>
 			<div class="form-control">
 				<div class="card soft">
-				<div class="display-flex">
+				<div class="display-flex flex-wrap">
 					<div class="flex-stretch display-flex">
 					<div class="flex-none">
 					<button data-filter="category" data-value="" type="button" class="fonm-button">All</button>
@@ -60,7 +60,10 @@ include_once "parts/templates.php";
 			</div>
 		</div>
 
-			<div class='productlist grid gap'></div>
+			<div class='productlist grid gap'>
+				<figure class="figure product">
+				</figure>
+			</div>
 
 		</div>
 

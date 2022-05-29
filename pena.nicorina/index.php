@@ -1,4 +1,8 @@
-<?php include_once "lib/php/functions.php"; ?><!DOCTYPE html>
+<?php 
+include_once "lib/php/functions.php"; 
+include_once "parts/templates.php"; 
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -6,7 +10,7 @@
 
 	<?php include "parts/meta.php"; ?>
 </head>
-<body>
+<body class="flush">
 	<?php include "parts/navbar.php"; ?>
 
 	<div class="view-window" style="background-image: url('img/summersale1.jpeg');">
@@ -36,30 +40,6 @@
 		</div>
 
 	<div class="container">
-		<h2>Deals! Deals! Deals!</h2>
-				<div class="grid gap xs-small md-medium">
-					<div class="col-xs-6 col-md-3">
-						<div class="card soft"><img src="img/img_2.jpg" alt="" class="media-image"></div>
-					</div>
-					<div class="col-xs-6 col-md-3">
-						<div class="card soft">
-							<img src="img/img_12.jpg" alt="" class="media-image">
-						</div>
-					</div>
-					<div class="col-xs-6 col-md-3">
-						<div class="card soft">
-							<img src="img/img_11.jpeg" alt="" class="media-image">
-						</div>
-					</div>
-					<div class="col-xs-6 col-md-3">
-						<div class="card soft">
-							<img src="img/img_1.JPG" alt="" class="media-image">
-						</div>
-					</div>
-				</div>
-		</div>
-
-	<div class="container">
 		<h2>Blogs</h2>
 		<article id="article1" class="article card soft">
 			<div class="display-flex flex-align-center">
@@ -71,10 +51,23 @@
 				</div>
 			</div>
 			<div class="article-body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Quo consectetur earum dolore quibusdam tempora ipsum animi suscipit sunt, voluptas in officiis delectus. Saepe, quam necessitatibus doloribus dolorum cum, a rerum neque animi veritatis iste laudantium consequatur sapiente earum sequi cumque!</p>
+				<p>2022 is bringing back some 80's vibes.  The high-waist and wide-leg jeans are now hitting the mainstream in the fashion world.  We spotted Mila Kunis all classy and casual with her cute tank top and her wide-leg pants.  <u>Read more</u></p>
 			</div>
 		</article>
 	</div>
+
+
+	<div class="container">
+		<h2>You'll love these</h2>
+		<div class="card soft">
+			<h3>Latest Footwear!</h3>
+			<?php recommendedCategory("footwear");?>
+			<h3>Latest Bags!</h3>
+			<?php recommendedCategory("bags");?>		
+		</div>
+	</div>
+
+
 
 
 </body>
